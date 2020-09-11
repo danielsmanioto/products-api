@@ -1,0 +1,42 @@
+com/dsmanioto/productsapi/ProductsApiApplication.java
+ com.dsmanioto.productsapi.ProductsApiApplication
+com/dsmanioto/productsapi/config/security/jwt/JwtTokenFilter.java
+ com.dsmanioto.productsapi.config.security.jwt.JwtTokenFilter
+com/dsmanioto/productsapi/config/WebConfig.java
+ com.dsmanioto.productsapi.config.WebConfig
+com/dsmanioto/productsapi/handler/CustomizedResponseEntityExceptionHandler.java
+ com.dsmanioto.productsapi.handler.CustomizedResponseEntityExceptionHandler
+com/dsmanioto/productsapi/config/security/jwt/JwtTokenProvider.java
+ com.dsmanioto.productsapi.config.security.jwt.JwtTokenProvider
+com/dsmanioto/productsapi/config/SwaggerConfig.java
+ com.dsmanioto.productsapi.config.SwaggerConfig
+com/dsmanioto/productsapi/model/Product.java
+ com.dsmanioto.productsapi.model.Product
+ com.dsmanioto.productsapi.model.Product$ProductBuilder
+com/dsmanioto/productsapi/config/security/vo/AccountCredentialsVO.java
+ com.dsmanioto.productsapi.config.security.vo.AccountCredentialsVO
+com/dsmanioto/productsapi/exception/ProductNotFoundException.java
+ com.dsmanioto.productsapi.exception.ProductNotFoundException
+com/dsmanioto/productsapi/controller/dto/ProductDTO.java
+ com.dsmanioto.productsapi.controller.dto.ProductDTO
+com/dsmanioto/productsapi/exception/ProductAlreadyExistException.java
+ com.dsmanioto.productsapi.exception.ProductAlreadyExistException
+com/dsmanioto/productsapi/service/UserService.java
+ com.dsmanioto.productsapi.service.UserService
+com/dsmanioto/productsapi/handler/dto/ExceptionResponse.java
+ com.dsmanioto.productsapi.handler.dto.ExceptionResponse
+ com.dsmanioto.productsapi.handler.dto.ExceptionResponse$ExceptionResponseBuilder
+com/dsmanioto/productsapi/config/SecurityConfig.java
+ com.dsmanioto.productsapi.config.SecurityConfig
+com/dsmanioto/productsapi/repository/ProductRepository.java
+ com.dsmanioto.productsapi.repository.ProductRepository
+com/dsmanioto/productsapi/controller/ProductController.java
+ com.dsmanioto.productsapi.controller.ProductController
+com/dsmanioto/productsapi/service/ProductService.java
+ com.dsmanioto.productsapi.service.ProductService
+com/dsmanioto/productsapi/exception/InvalidJwtAuthenticationException.java
+ com.dsmanioto.productsapi.exception.InvalidJwtAuthenticationException
+com/dsmanioto/productsapi/config/MongoConfig.java
+ com.dsmanioto.productsapi.config.MongoConfig
+com/dsmanioto/productsapi/config/security/jwt/JwtConfigurer.java
+ com.dsmanioto.productsapi.config.security.jwt.JwtConfigurer
