@@ -36,7 +36,7 @@ public class ProductService {
     }
 
     private void validateProduct(ProductDTO productDTO) {
-        Optional<Product> product = repository.findByName(productDTO.getId());
+        Optional<Product> product = repository.findByName(productDTO.getName());
         if (product.isPresent()) {
             throw new ProductAlreadyExistException("Product already exist.");
         }
