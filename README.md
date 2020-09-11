@@ -6,8 +6,8 @@ This folder is a local git repository.
 2. Start springboot application with gradle and generate jar
     `./gradlew clean build bootRun`
 or
-  Start using docker 
-  `sh build.sh && sh run.sh` 
+  Start with jar
+  `java -jar build/libs/products-api-0.0.1-SNAPSHOT.jar` 
 3. Swagger - API Documentation
 `http://localhost:8080/swagger-ui.html#/`
 
