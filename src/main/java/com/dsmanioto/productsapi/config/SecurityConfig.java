@@ -1,6 +1,6 @@
 package com.dsmanioto.productsapi.config;
 
-import com.dsmanioto.productsapi.service.UserService;
+import com.dsmanioto.productsapi.autentication.UserAutentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -11,10 +11,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final UserService userService;
+    private final UserAutentication userService;
 
     @Autowired
-    public SecurityConfig(UserService userService) {
+    public SecurityConfig(UserAutentication userService) {
         this.userService = userService;
     }
 

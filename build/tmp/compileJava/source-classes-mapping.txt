@@ -21,13 +21,15 @@ com/dsmanioto/productsapi/controller/dto/ProductDTO.java
  com.dsmanioto.productsapi.controller.dto.ProductDTO
 com/dsmanioto/productsapi/exception/ProductAlreadyExistException.java
  com.dsmanioto.productsapi.exception.ProductAlreadyExistException
-com/dsmanioto/productsapi/service/UserService.java
- com.dsmanioto.productsapi.service.UserService
+com/dsmanioto/productsapi/service/UserApplicationService.java
+ com.dsmanioto.productsapi.service.UserApplicationService
 com/dsmanioto/productsapi/handler/dto/ExceptionResponse.java
  com.dsmanioto.productsapi.handler.dto.ExceptionResponse
  com.dsmanioto.productsapi.handler.dto.ExceptionResponse$ExceptionResponseBuilder
 com/dsmanioto/productsapi/config/SecurityConfig.java
  com.dsmanioto.productsapi.config.SecurityConfig
+com/dsmanioto/productsapi/autentication/UserAutentication.java
+ com.dsmanioto.productsapi.autentication.UserAutentication
 com/dsmanioto/productsapi/repository/ProductRepository.java
  com.dsmanioto.productsapi.repository.ProductRepository
 com/dsmanioto/productsapi/controller/ProductController.java
@@ -40,5 +42,8 @@ com/dsmanioto/productsapi/config/MongoConfig.java
  com.dsmanioto.productsapi.config.MongoConfig
 com/dsmanioto/productsapi/config/security/jwt/JwtConfigurer.java
  com.dsmanioto.productsapi.config.security.jwt.JwtConfigurer
+com/dsmanioto/productsapi/repository/UserApplicationRepository.java
+ com.dsmanioto.productsapi.repository.UserApplicationRepository
 com/dsmanioto/productsapi/model/UserApplication.java
  com.dsmanioto.productsapi.model.UserApplication
+ com.dsmanioto.productsapi.model.UserApplication$UserApplicationBuilder

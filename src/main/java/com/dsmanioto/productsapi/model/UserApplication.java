@@ -1,6 +1,7 @@
 package com.dsmanioto.productsapi.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Builder;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
@@ -11,6 +12,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotEmpty;
 
 @Document
+@Builder
 @Getter
 @Setter
 @EqualsAndHashCode
