@@ -6,10 +6,10 @@ com/dsmanioto/productsapi/config/WebConfig.java
  com.dsmanioto.productsapi.config.WebConfig
 com/dsmanioto/productsapi/handler/CustomizedResponseEntityExceptionHandler.java
  com.dsmanioto.productsapi.handler.CustomizedResponseEntityExceptionHandler
-com/dsmanioto/productsapi/config/security/jwt/JwtTokenProvider.java
- com.dsmanioto.productsapi.config.security.jwt.JwtTokenProvider
 com/dsmanioto/productsapi/config/SwaggerConfig.java
  com.dsmanioto.productsapi.config.SwaggerConfig
+com/dsmanioto/productsapi/config/security/jwt/JwtTokenProvider.java
+ com.dsmanioto.productsapi.config.security.jwt.JwtTokenProvider
 com/dsmanioto/productsapi/model/Product.java
  com.dsmanioto.productsapi.model.Product
  com.dsmanioto.productsapi.model.Product$ProductBuilder
@@ -40,3 +40,5 @@ com/dsmanioto/productsapi/config/MongoConfig.java
  com.dsmanioto.productsapi.config.MongoConfig
 com/dsmanioto/productsapi/config/security/jwt/JwtConfigurer.java
  com.dsmanioto.productsapi.config.security.jwt.JwtConfigurer
+com/dsmanioto/productsapi/model/UserApplication.java
+ com.dsmanioto.productsapi.model.UserApplication
