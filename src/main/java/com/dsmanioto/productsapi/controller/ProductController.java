@@ -66,7 +66,7 @@ public class ProductController {
     @ApiResponses(value = @ApiResponse(code = 201, message = "CREATED"))
     @PostMapping
     public ResponseEntity<?> insert(@RequestBody ProductDTO productDTO) {
-        service.save(productDTO);
+        service.save(productDTO.convertoDTOtoObject());
 
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
@@ -78,7 +78,7 @@ public class ProductController {
         Product product = service.findById(productDTO.getId())
                 .orElseThrow(() -> new ProductNotFoundException("Product not found."));
 
-        service.save(productDTO);
+        service.save(productDTO.convertoDTOtoObject());
 
         return new ResponseEntity<>(HttpStatus.OK);
     }

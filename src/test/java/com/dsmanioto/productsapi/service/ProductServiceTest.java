@@ -1,6 +1,5 @@
 package com.dsmanioto.productsapi.service;
 
-import com.dsmanioto.productsapi.controller.dto.ProductDTO;
 import com.dsmanioto.productsapi.model.Product;
 import com.dsmanioto.productsapi.repository.ProductRepository;
 import org.junit.Before;
@@ -80,12 +79,7 @@ public class ProductServiceTest {
 
     @Test
     public void saveProduct() {
-        ProductDTO productDTO = new ProductDTO();
-        productDTO.setName("Corona");
-        productDTO.setDescription("Corona");
-        productDTO.setPrice(new BigDecimal("4.38"));
-
-        productService.save(productDTO);
+        productService.save(setProductMock("", "Stella", "Beer", "2.98"));
     }
 
     @Test
@@ -95,13 +89,13 @@ public class ProductServiceTest {
         productService.delete(product);
     }
 
-    private Product setProductMock(String s, String stella, String beer, String s2) {
+    private Product setProductMock(String id, String name, String description, String price) {
         return Product.builder()
-                .id(s)
-                .name(stella)
-                .description(beer)
-                .brand(stella)
-                .price(new BigDecimal(s2))
+                .id(id)
+                .name(name)
+                .description(description)
+                .brand(name)
+                .price(new BigDecimal(price))
                 .build();
     }
 

@@ -3,6 +3,7 @@ package com.dsmanioto.productsapi.service;
 import com.dsmanioto.productsapi.model.UserApplication;
 import com.dsmanioto.productsapi.repository.UserApplicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -18,6 +19,8 @@ public class UserApplicationService {
     }
 
     public void save(UserApplication userApplication) {
+        String passwordEncripted = new BCryptPasswordEncoder().encode(userApplication.getPassword());
+        userApplication.setPassword(passwordEncripted);
         repository.save(userApplication);
     }
 

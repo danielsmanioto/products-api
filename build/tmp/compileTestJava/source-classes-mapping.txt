@@ -1,8 +1,10 @@
 com/dsmanioto/productsapi/service/ProductServiceTest.java
  com.dsmanioto.productsapi.service.ProductServiceTest
-com/dsmanioto/productsapi/controller/ProductControllerTest.java
- com.dsmanioto.productsapi.controller.ProductControllerTest
-com/dsmanioto/productsapi/ProductsApiApplicationTests.java
- com.dsmanioto.productsapi.ProductsApiApplicationTests
 com/dsmanioto/productsapi/service/UserApplicationServiceTest.java
  com.dsmanioto.productsapi.service.UserApplicationServiceTest
+com/dsmanioto/productsapi/ProductsApiApplicationTests.java
+ com.dsmanioto.productsapi.ProductsApiApplicationTests
+com/dsmanioto/productsapi/controller/ProductControllerTest.java
+ com.dsmanioto.productsapi.controller.ProductControllerTest
+com/dsmanioto/productsapi/PasswordEncrypterTest.java
+ com.dsmanioto.productsapi.PasswordEncrypterTest

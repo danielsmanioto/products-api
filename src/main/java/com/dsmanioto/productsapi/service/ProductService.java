@@ -1,6 +1,5 @@
 package com.dsmanioto.productsapi.service;
 
-import com.dsmanioto.productsapi.controller.dto.ProductDTO;
 import com.dsmanioto.productsapi.exception.ProductAlreadyExistException;
 import com.dsmanioto.productsapi.model.Product;
 import com.dsmanioto.productsapi.repository.ProductRepository;
@@ -21,21 +20,12 @@ public class ProductService {
         this.repository = repository;
     }
 
-    public void save(ProductDTO productDTO) {
-        validateProduct(productDTO);
-
-        Product product = Product.builder()
-                .id(productDTO.getId())
-                .name(productDTO.getName())
-                .description(productDTO.getDescription())
-                .price(productDTO.getPrice())
-                .brand(productDTO.getBrand())
-                .build();
-
+    public void save(Product product) {
+        validateProduct(product);
         repository.save(product);
     }
 
-    private void validateProduct(ProductDTO productDTO) {
+    private void validateProduct(Product productDTO) {
         Optional<Product> product = repository.findByName(productDTO.getName());
         if (product.isPresent()) {
             throw new ProductAlreadyExistException("Product already exist.");

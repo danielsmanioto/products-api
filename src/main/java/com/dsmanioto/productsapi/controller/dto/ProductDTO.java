@@ -1,5 +1,6 @@
 package com.dsmanioto.productsapi.controller.dto;
 
+import com.dsmanioto.productsapi.model.Product;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,5 +15,14 @@ public class ProductDTO {
     private String description;
     private BigDecimal price;
     private String brand;
+
+    public Product convertoDTOtoObject() {
+        return Product.builder()
+                .id(this.id)
+                .name(this.name)
+                .description(this.description)
+                .price(this.price)
+                .build();
+    }
 
 }
