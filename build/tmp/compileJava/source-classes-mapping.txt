@@ -1,5 +1,7 @@
 com/dsmanioto/productsapi/config/WebConfig.java
  com.dsmanioto.productsapi.config.WebConfig
+com/dsmanioto/productsapi/exception/UserAutenticationUserDontExistExecption.java
+ com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExecption
 com/dsmanioto/productsapi/config/security/jwt/JwtTokenProvider.java
  com.dsmanioto.productsapi.config.security.jwt.JwtTokenProvider
 com/dsmanioto/productsapi/controller/UserApplicationController.java
@@ -25,10 +27,10 @@ com/dsmanioto/productsapi/model/UserApplication.java
  com.dsmanioto.productsapi.model.UserApplication$UserApplicationBuilder
 com/dsmanioto/productsapi/ProductsApiApplication.java
  com.dsmanioto.productsapi.ProductsApiApplication
+com/dsmanioto/productsapi/exception/handler/CustomizedResponseEntityExceptionHandler.java
+ com.dsmanioto.productsapi.exception.handler.CustomizedResponseEntityExceptionHandler
 com/dsmanioto/productsapi/config/security/jwt/JwtTokenFilter.java
  com.dsmanioto.productsapi.config.security.jwt.JwtTokenFilter
-com/dsmanioto/productsapi/handler/CustomizedResponseEntityExceptionHandler.java
- com.dsmanioto.productsapi.handler.CustomizedResponseEntityExceptionHandler
 com/dsmanioto/productsapi/config/SwaggerConfig.java
  com.dsmanioto.productsapi.config.SwaggerConfig
 com/dsmanioto/productsapi/model/Product.java
@@ -36,11 +38,11 @@ com/dsmanioto/productsapi/model/Product.java
  com.dsmanioto.productsapi.model.Product$ProductBuilder
 com/dsmanioto/productsapi/config/security/vo/AccountCredentialsVO.java
  com.dsmanioto.productsapi.config.security.vo.AccountCredentialsVO
+com/dsmanioto/productsapi/exception/handler/dto/ExceptionResponse.java
+ com.dsmanioto.productsapi.exception.handler.dto.ExceptionResponse
+ com.dsmanioto.productsapi.exception.handler.dto.ExceptionResponse$ExceptionResponseBuilder
 com/dsmanioto/productsapi/exception/ProductAlreadyExistException.java
  com.dsmanioto.productsapi.exception.ProductAlreadyExistException
-com/dsmanioto/productsapi/handler/dto/ExceptionResponse.java
- com.dsmanioto.productsapi.handler.dto.ExceptionResponse
- com.dsmanioto.productsapi.handler.dto.ExceptionResponse$ExceptionResponseBuilder
 com/dsmanioto/productsapi/autentication/UserAutentication.java
  com.dsmanioto.productsapi.autentication.UserAutentication
 com/dsmanioto/productsapi/autentication/PasswordEncrypter.java

@@ -6,5 +6,5 @@ com/dsmanioto/productsapi/ProductsApiApplicationTests.java
  com.dsmanioto.productsapi.ProductsApiApplicationTests
 com/dsmanioto/productsapi/controller/ProductControllerTest.java
  com.dsmanioto.productsapi.controller.ProductControllerTest
-com/dsmanioto/productsapi/PasswordEncrypterTest.java
- com.dsmanioto.productsapi.PasswordEncrypterTest
+com/dsmanioto/productsapi/autentication/PasswordEncrypterTest.java
+ com.dsmanioto.productsapi.autentication.PasswordEncrypterTest
