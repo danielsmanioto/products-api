@@ -2,7 +2,8 @@ package com.dsmanioto.productsapi.exception.handler;
 
 import com.dsmanioto.productsapi.exception.ProductAlreadyExistException;
 import com.dsmanioto.productsapi.exception.ProductNotFoundException;
-import com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExecption;
+import com.dsmanioto.productsapi.exception.UserAlreadyExistException;
+import com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExeception;
 import com.dsmanioto.productsapi.exception.handler.dto.ExceptionResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -19,7 +20,7 @@ import java.util.Date;
 public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(ProductNotFoundException.class)
-    public final ResponseEntity<ExceptionResponse> handlerNotFound(Exception ex, WebRequest request) {
+    public final ResponseEntity<ExceptionResponse> handlerProductNotFound(Exception ex, WebRequest request) {
 
         ExceptionResponse exceptionResponse = ExceptionResponse.builder()
                 .timestamp(new Date())
@@ -32,7 +33,7 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
     }
 
     @ExceptionHandler(ProductAlreadyExistException.class)
-    public final ResponseEntity<ExceptionResponse> handlerAlreadyExist(Exception ex, WebRequest request) {
+    public final ResponseEntity<ExceptionResponse> handlerAProductlreadyExist(Exception ex, WebRequest request) {
 
         ExceptionResponse exceptionResponse = ExceptionResponse.builder()
                 .timestamp(new Date())
@@ -44,7 +45,19 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
         return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_ACCEPTABLE);
     }
 
-    @ExceptionHandler(UserAutenticationUserDontExistExecption.class)
+    @ExceptionHandler(UserAlreadyExistException.class)
+    public final ResponseEntity<ExceptionResponse> handlerUserAlreadyExist(Exception ex, WebRequest request) {
+
+        ExceptionResponse exceptionResponse = ExceptionResponse.builder()
+                .timestamp(new Date())
+                .message(ex.getMessage())
+                .details(request.getDescription(false))
+                .build();
+
+        log.error("User already exist {}", exceptionResponse);
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_ACCEPTABLE);
+    }
+    @ExceptionHandler(UserAutenticationUserDontExistExeception.class)
     public final ResponseEntity<ExceptionResponse> handlerUserDontExist(Exception ex, WebRequest request) {
 
         ExceptionResponse exceptionResponse = ExceptionResponse.builder()
@@ -55,6 +68,32 @@ public class CustomizedResponseEntityExceptionHandler extends ResponseEntityExce
 
         log.error("Users dont exist {}", exceptionResponse);
         return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_ACCEPTABLE);
+    }
+
+    @ExceptionHandler(Exception.class)
+    public final ResponseEntity<ExceptionResponse> hadledException(Exception ex, WebRequest request) {
+
+        ExceptionResponse exceptionResponse = ExceptionResponse.builder()
+                .timestamp(new Date())
+                .message(ex.getMessage())
+                .details(request.getDescription(false))
+                .build();
+
+        log.error("Error {}", exceptionResponse);
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+    }
+
+    @ExceptionHandler(RuntimeException.class)
+    public final ResponseEntity<ExceptionResponse> hadledRuntimeException(Exception ex, WebRequest request) {
+
+        ExceptionResponse exceptionResponse = ExceptionResponse.builder()
+                .timestamp(new Date())
+                .message(ex.getMessage())
+                .details(request.getDescription(false))
+                .build();
+
+        log.error("Runtime Error {}", exceptionResponse);
+        return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
     }
 
 }

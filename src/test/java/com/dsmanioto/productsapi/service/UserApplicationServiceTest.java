@@ -34,7 +34,7 @@ public class UserApplicationServiceTest {
 
     @Test
     public void validateFindByUserName() {
-        BDDMockito.given(repository.findById("daniel"))
+        BDDMockito.given(repository.findByUsername("daniel"))
                 .willReturn(Optional.ofNullable(getUserApplicationMock()));
 
         Optional<UserApplication> userApplication = service.findByUserName("daniel");
@@ -49,6 +49,7 @@ public class UserApplicationServiceTest {
                 .username("daniel")
                 .password("123456")
                 .name("Daniel Smanioto")
+                .admin(true)
                 .build();
     }
 

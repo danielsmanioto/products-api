@@ -1,7 +1,5 @@
 com/dsmanioto/productsapi/config/WebConfig.java
  com.dsmanioto.productsapi.config.WebConfig
-com/dsmanioto/productsapi/exception/UserAutenticationUserDontExistExecption.java
- com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExecption
 com/dsmanioto/productsapi/config/security/jwt/JwtTokenProvider.java
  com.dsmanioto.productsapi.config.security.jwt.JwtTokenProvider
 com/dsmanioto/productsapi/controller/UserApplicationController.java
@@ -14,6 +12,8 @@ com/dsmanioto/productsapi/controller/dto/ProductDTO.java
  com.dsmanioto.productsapi.controller.dto.ProductDTO
 com/dsmanioto/productsapi/service/UserApplicationService.java
  com.dsmanioto.productsapi.service.UserApplicationService
+com/dsmanioto/productsapi/exception/UserAlreadyExistException.java
+ com.dsmanioto.productsapi.exception.UserAlreadyExistException
 com/dsmanioto/productsapi/config/SecurityConfig.java
  com.dsmanioto.productsapi.config.SecurityConfig
 com/dsmanioto/productsapi/service/ProductService.java
@@ -41,6 +41,8 @@ com/dsmanioto/productsapi/config/security/vo/AccountCredentialsVO.java
 com/dsmanioto/productsapi/exception/handler/dto/ExceptionResponse.java
  com.dsmanioto.productsapi.exception.handler.dto.ExceptionResponse
  com.dsmanioto.productsapi.exception.handler.dto.ExceptionResponse$ExceptionResponseBuilder
+com/dsmanioto/productsapi/exception/UserAutenticationUserDontExistExeception.java
+ com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExeception
 com/dsmanioto/productsapi/exception/ProductAlreadyExistException.java
  com.dsmanioto.productsapi.exception.ProductAlreadyExistException
 com/dsmanioto/productsapi/autentication/UserAutentication.java

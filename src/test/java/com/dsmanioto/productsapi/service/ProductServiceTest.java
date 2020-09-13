@@ -43,7 +43,7 @@ public class ProductServiceTest {
 
         Optional<Product> product = productService.findById("5f597d3ca003400cce62fe91");
         Assertions.assertEquals("Corona", productMock.getName());
-        Assertions.assertEquals("5f597d3ca003400cce62fe91", productMock.getId());
+        Assertions.assertEquals("5f597d3ca003400cce62fe91", productMock.get_id());
         Assertions.assertEquals(new BigDecimal("4.39"), productMock.getPrice());
         Assertions.assertEquals(new BigDecimal("4.39"), productMock.getPrice());
         Assertions.assertEquals("Corona", productMock.getBrand());
@@ -91,7 +91,7 @@ public class ProductServiceTest {
 
     private Product setProductMock(String id, String name, String description, String price) {
         return Product.builder()
-                .id(id)
+                ._id(id)
                 .name(name)
                 .description(description)
                 .brand(name)

@@ -6,8 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.Column;
-import javax.validation.constraints.NotEmpty;
+import javax.persistence.Id;
 
 @Document
 @Builder
@@ -16,14 +15,16 @@ import javax.validation.constraints.NotEmpty;
 @EqualsAndHashCode
 public class UserApplication {
 
-    @Column(unique = true)
-    //@NotEmpty
+    @Id
+    private String _id;
+
     private String username;
 
-    //@NotEmpty
     private String password;
 
-    //@NotEmpty
     private String name;
 
+    private Boolean admin;
+
 }
+

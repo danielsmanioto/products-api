@@ -1,6 +1,6 @@
 package com.dsmanioto.productsapi.autentication;
 
-import com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExecption;
+import com.dsmanioto.productsapi.exception.UserAutenticationUserDontExistExeception;
 import com.dsmanioto.productsapi.model.UserApplication;
 import com.dsmanioto.productsapi.repository.UserApplicationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,11 +30,16 @@ public class UserAutentication implements UserDetailsService {
         Optional<UserApplication> userApplication = userApplicationRepository.findByUsername(username);
 
         if(!userApplication.isPresent()) {
-            throw new UserAutenticationUserDontExistExecption("User " + username + " dont exist");
+            throw new UserAutenticationUserDontExistExeception("User " + username + " don't exist");
         }
 
+        return new User(username, userApplication.get().getPassword(), getAuthoritiesByUser(userApplication.get()));
+    }
+
+    private List<GrantedAuthority> getAuthoritiesByUser(UserApplication userApplication) {
         List<GrantedAuthority> authorityListAdmin = AuthorityUtils.createAuthorityList("ROLE_USER", "ROLE_ADMIN");
-        return new User(username, userApplication.get().getPassword(), authorityListAdmin);
+        List<GrantedAuthority> authorityListUser = AuthorityUtils.createAuthorityList("ROLE_USER");
+        return userApplication.getAdmin() ? authorityListAdmin : authorityListUser;
     }
 
 }

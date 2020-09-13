@@ -23,10 +23,13 @@ public class UserApplicationDTO {
     @NotEmpty
     private String name;
 
+    private Boolean admin = false;
+
     public UserApplication convertDTOtoObject() {
         return UserApplication.builder()
                 .username(this.username)
                 .password(this.password)
+                .admin(this.admin)
                 .name(this.name).build();
     }
 

@@ -18,7 +18,7 @@ public class ProductDTO {
 
     public Product convertoDTOtoObject() {
         return Product.builder()
-                .id(this.id)
+                ._id(this.id)
                 .name(this.name)
                 .description(this.description)
                 .price(this.price)
