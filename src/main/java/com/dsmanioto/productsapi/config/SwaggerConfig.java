@@ -30,7 +30,7 @@ public class SwaggerConfig  {
     private ApiInfo apiInfo() {
         return new ApiInfo(
                 "Products-API",
-                "API and simple database to handle the products of the ABInBev ecommerce",
+                "API and simple database to handle the product ecommerce",
                 "v1",
                 "Terms Of Service Url",
                 new Contact("Daniel Smanioto", "www.danielsmanioto.com", "daniel.smanioto@gmail.com"),
